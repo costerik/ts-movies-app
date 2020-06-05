@@ -9,34 +9,72 @@ import StartIcon from '../../assets/images/star-solid.svg';
 /* types */
 import {MovieCardType} from './movie-card.types';
 
+/* utils */
+import utils from '../../utils';
+const {isNullOrUndefined, isEmpty} = utils;
+
 function MovieCard(props: MovieCardType): ReactElement {
   const {id, imageSrc, title, genres, year, description, moreInfo, rating} = props;
   return (
     <div className={style.container}>
       <div className={style.left}>
-        <Link to={`movie/${id}`}>
-          <img src={imageSrc} className={style.image} />
-        </Link>
+        {!isNullOrUndefined(imageSrc) && !isEmpty(imageSrc) ? (
+          !isNullOrUndefined(id) && !isEmpty(id) ? (
+            <Link data-testid="link-image" to={`movie/${id}`}>
+              <img src={imageSrc} className={style.image} />
+            </Link>
+          ) : (
+            <img data-testid="image" src={imageSrc} className={style.image} />
+          )
+        ) : null}
       </div>
       <div className={style.right}>
         <div className={style.titleContainer}>
           <div className={style.title}>
-            <Link to={`movie/${id}`}>{title}</Link>
+            {!isNullOrUndefined(title) && !isEmpty(title) ? (
+              !isNullOrUndefined(id) && !isEmpty(id) ? (
+                <Link data-testid="link-title" to={`movie/${id}`}>
+                  <span>{title}</span>
+                </Link>
+              ) : (
+                <span data-testid="title">{title}</span>
+              )
+            ) : null}
           </div>
           <div className={style.average}>
-            <span>{rating}</span>
-            <img className={style.star} src={StartIcon} />
+            {!isNullOrUndefined(rating) && !isEmpty(rating) ? (
+              <div data-testid="rating">
+                <span>{rating}</span>
+                <img className={style.star} src={StartIcon} />
+              </div>
+            ) : null}
           </div>
         </div>
         <div className={style.yearContainer}>
-          <p className={style.year}>{year}</p>
-          {Array.isArray(genres) ? <p className={style.genre}>{genres.join(', ')}</p> : null}
+          {!isNullOrUndefined(year) && !isEmpty(year) ? (
+            <p data-testid="year" className={style.year}>
+              {year}
+            </p>
+          ) : null}
+          {Array.isArray(genres) ? (
+            <p data-testid="genres" className={style.genre}>
+              {genres.join(', ')}
+            </p>
+          ) : null}
         </div>
         <div className={style.descriptionContainer}>
-          <p className={style.description}>{description}</p>
+          {!isNullOrUndefined(description) && !isEmpty(description) ? (
+            <p data-testid="description" className={style.description}>
+              {description}
+            </p>
+          ) : null}
         </div>
         <div className={style.moreInfoContainer}>
-          <Link to={`movie/${id}`}>{moreInfo}</Link>
+          {!isNullOrUndefined(moreInfo) && !isEmpty(moreInfo) ? (
+            <Link data-testid="moreInfo" to={`movie/${id}`}>
+              {moreInfo}
+            </Link>
+          ) : null}
         </div>
       </div>
     </div>

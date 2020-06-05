@@ -5,6 +5,7 @@ yarn-cache
 build
 storybook/storyLoader.js
 storybook/storybook.js
+jest.config.js
 .storybook/*
 .build-storybook/*
 .git

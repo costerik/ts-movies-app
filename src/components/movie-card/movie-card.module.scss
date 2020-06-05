@@ -11,73 +11,89 @@
   }
 }
 
+.left {
+  height: 278px;
+  width: 185px;
+
+  a {
+    display: block;
+    height: 100%;
+    width: 100%;
+  }
+
+  .image {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+  }
+}
+
 .right {
   flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-}
+  .titleContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    padding-bottom: 16px;
+    font-size: 20px;
+    margin: 25px 50px 0px 50px;
+  }
 
-.titleContainer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-direction: row;
-  padding-bottom: 16px;
-  font-size: 20px;
-  margin: 25px 50px 0px 50px;
-}
+  .title {
+  }
 
-.title {
-}
+  .average {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
-.average {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+  .star {
+    height: 12px;
+    width: 12px;
+    margin-left: 5px;
+  }
 
-.star {
-  height: 12px;
-  width: 12px;
-  margin-left: 5px;
-}
+  .yearContainer {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 16px;
+    margin: 0px 50px;
+  }
 
-.yearContainer {
-  display: flex;
-  justify-content: space-between;
-  padding-bottom: 16px;
-  margin: 0px 50px;
-}
+  .year,
+  .genre {
+    opacity: 0.8;
+  }
 
-.year,
-.genre {
-  opacity: 0.8;
-}
+  .descriptionContainer {
+    margin: 0px 50px;
+    max-height: calc(100% - 160px);
+    overflow: scroll;
+  }
 
-.descriptionContainer {
-  margin: 0px 50px;
-  max-height: calc(100% - 160px);
-  overflow: scroll;
-}
+  .description {
+    line-height: 23px;
+    font-size: 18px;
+  }
 
-.description {
-  line-height: 23px;
-  font-size: 18px;
-}
+  .moreInfoContainer {
+    border-top: 1px solid #f0f0f0;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    padding: 0px 50px;
+  }
 
-.moreInfoContainer {
-  border-top: 1px solid #f0f0f0;
-  height: 50px;
-  display: flex;
-  align-items: center;
-  padding: 0px 50px;
-}
-
-.image {
-  object-fit: container;
-  height: 100%;
-  width: 100%;
+  .image {
+    object-fit: container;
+    height: 100%;
+    width: 100%;
+  }
 }
 
 @media screen and (min-width: 30.063em) {
