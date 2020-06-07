@@ -1,0 +1,80 @@
+.container {
+  background: rgba(144, 151, 156, 0.59);
+  background: linear-gradient(rgba(144, 151, 156, 0.59), rgba(83, 93, 101, 0.93));
+  display: flex;
+}
+
+.whiteColor {
+  color: #ffffff;
+}
+
+.imageContainer {
+  flex: 0.25;
+}
+
+.image {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.dataContainer {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.dataContainerTop,
+.dataContainerBottom {
+  margin: 0px 25px;
+}
+
+.dataContainerTop {
+  margin-top: 10px;
+}
+
+.dataContainerBottom {
+  margin-bottom: 20px;
+}
+
+.titleContainer {
+  font-size: 32px;
+  margin-bottom: 15px;
+}
+
+.scoreContainer {
+  margin-bottom: 15px;
+}
+
+.score {
+  display: inline-block;
+  font-size: 20px;
+  border-radius: 30px;
+  height: 60px;
+  width: 60px;
+  line-height: 60px;
+  background: #494848;
+  text-align: center;
+  opacity: 0.8;
+}
+
+.scoreText {
+  margin-left: 15px;
+}
+
+.subtitle {
+  margin-bottom: 15px;
+}
+
+.description {
+  margin-bottom: 40px;
+}
+
+.crewTitle {
+  margin-bottom: 15px;
+}
+
+.crew {
+  font-size: 14px;
+}

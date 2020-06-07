@@ -57,7 +57,7 @@
   "jest": {
     "coveragePathIgnorePatterns": [
       ".types.ts",
-      ".d.ts",
+      "react-app-env.d.ts",
       "serviceWorker"
     ],
     "collectCoverageFrom": [
